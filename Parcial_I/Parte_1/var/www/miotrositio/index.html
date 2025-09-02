@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Historias de Personas - Un lugar donde las experiencias y relatos de la vida cobran vida.">
+    <title>Historias de Personas</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Gradiente de fondo */
+        .hero {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: #2575fc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #6a11cb;
+        }
+
+        /* Sección de historias */
+        .stories-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .story {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 48%;
+            transition: transform 0.3s ease;
+        }
+
+        .story:hover {
+            transform: translateY(-10px);
+        }
+
+        .story h2 {
+            font-size: 1.5rem;
+            color: #2575fc;
+            margin-bottom: 15px;
+        }
+
+        .story p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos de medios para dispositivos pequeños */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            .stories-section {
+                flex-direction: column;
+            }
+
+            .story {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Historias de Personas</h1>
+            <p>Relatos, experiencias y vivencias compartidas que nos inspiran</p>
+            <a href="#stories" class="btn-primary">Leer historias</a>
+        </div>
+    </header>
+
+    <section id="stories" class="stories-section container">
+        <div class="story">
+            <h2>La Historia de Maria</h2>
+            <p>Maria comenzó su viaje en el arte a una edad temprana. Hoy en día, sus obras son reconocidas mundialmente. Una historia de perseverancia y pasión...</p>
+            <a target='_blank' href="http://www.miotrositio.com/~maria_martinez/" class="btn-primary">Leer más</a>
+        </div>
+        <div class="story">
+            <h2>Juan el Valiente</h2>
+            <p>Juan Gonzales nunca imaginó que un viaje en tren cambiaría su vida. Un encuentro casual que abrió nuevas puertas en su carrera profesional...</p>
+            <a target='_blank' href="http://www.miotrositio.com/~juan_gonzales/" class="btn-primary">Leer más</a>
+        </div>
+        <div class="story">
+            <h2>La grandeza de Perez</h2>
+            <p>Después de una gran pérdida, Pedro compartió su proceso de duelo y cómo encontró fuerzas para comenzar de nuevo...</p>
+            <a target='_blank' href="http://www.miotrositio.com/~pedro_perez/" class="btn-primary">Leer más</a>
+        </div>
+        <div class="story">
+            <h2>El Secreto de la Solidaridad</h2>
+            <p>Un pequeño pueblo escondido en las montañas guarda el secreto de una vida plena y feliz. La historia de Sergio y su búsqueda de la verdadera felicidad...</p>
+            <a href="#" class="btn-primary">Leer más</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Historias de Personas. Todos los derechos reservados.</p>
+        <p><a href="#">Política de privacidad</a> | <a href="#">Términos de servicio</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Error 401 - No autorizado</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
+
+    .card {
+      position: relative;
+      background-color: #111;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+      overflow: hidden;
+      width: 350px;
+      max-width: 90%;
+    }
+
+    .card h1 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    /* Punto de luz animado */
+    .border-light {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: white;
+      border-radius: 50%;
+      box-shadow: 0 0 8px white;
+      animation: moveAround 6s linear infinite;
+      z-index: 2;
+    }
+
+    @keyframes moveAround {
+      0% {
+        top: 0;
+        left: 0;
+      }
+      25% {
+        top: 0;
+        left: 100%;
+        transform: translateX(-100%);
+      }
+      50% {
+        top: 100%;
+        left: 100%;
+        transform: translate(-100%, -100%);
+      }
+      75% {
+        top: 100%;
+        left: 0;
+        transform: translateY(-100%);
+      }
+      100% {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    /* Opcional: borde extra visual sutil */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="border-light"></div>
+    <h1>Error 401 - No autorizado</h1>
+    <p>¿Intentabas colarte sin invitación? Hasta los bots necesitan pase VIP 😏</p>
+  </div>
+</body>
+</html>
