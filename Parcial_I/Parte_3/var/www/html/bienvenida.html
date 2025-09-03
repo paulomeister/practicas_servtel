@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bienvenido - Ngrok + Apache</title>
+  
+  <!-- Fuente tipo IDE -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+
+  <style>
+    /* Globales */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Fira Code', monospace;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #7f00ff, #e100ff);
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding: 3rem 1rem;
+    }
+
+    .card {
+      position: relative;
+      background-color: #111;
+      color: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      width: 300px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #7f00ff, #e100ff, #7f00ff);
+      z-index: -1;
+      background-size: 300% 300%;
+      animation: moveLight 4s linear infinite;
+      border-radius: 1rem;
+      mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+      -webkit-mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+      mask-composite: exclude;
+      -webkit-mask-composite: destination-out;
+      padding: 2px;
+    }
+
+    @keyframes moveLight {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem 2rem;
+      background-color: #111;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    footer strong {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    Bienvenido a tu Servidor Apache con Ngrok
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Servidor Activo</h2>
+      <p>Tu servidor Apache HTTP está funcionando correctamente.</p>
+    </div>
+
+    <div class="card">
+      <h2>Ngrok en Línea</h2>
+      <p>Ngrok ha generado un túnel público a tu entorno local.</p>
+    </div>
+
+    <div class="card">
+      <h2>Tips de Seguridad</h2>
+      <p>No compartas tu URL pública de Ngrok con personas no autorizadas.</p>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Jean Paul Delgado</strong> — Clase de Servicios Telemáticos
+  </footer>
+</body>
+</html>
